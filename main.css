@@ -1,0 +1,253 @@
+/* Fonts */
+@font-face {
+  font-family: 'ivyPresto-display-light';
+  src: url('assets/fonts/ivyPresto-display-light.woff2') format('woff2'); 
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'ivyPresto-display-regular';
+  src: url('assets/fonts/ivyPresto-display-regular.woff2') format('woff2'); 
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'poppins-light';
+  src: url('assets/fonts/poppins-light.woff2') format('woff2'); 
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'poppins-semibold-italic';
+  src: url('assets/fonts/poppins-semibold-italic.woff2') format('woff2'); 
+  font-weight: normal;
+}
+
+
+/* Main Styles */
+section {
+  margin: 50px auto 0;
+  width: 90%;
+}
+
+h1 {
+	font-family: 'ivyPresto-display-regular', sans-serif;
+	font-size: 80px;
+	line-height: 100px;
+	text-align: center;
+  color: #0F0F0E;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  margin-bottom: 20px;
+}
+
+h3 {
+	font-family: 'poppins-semibold-italic', sans-serif;
+	font-size: 18px;
+	font-style: italic;
+	line-height: 23px;
+	letter-spacing: 0.1em;
+	text-align: center;
+  text-transform: uppercase;
+  color: rgba(211, 167, 157, 1);
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.5);
+  -webkit-text-stroke: 1.5px rgba(0, 0, 0, 1);
+  margin-bottom: 20px;
+}
+
+p {
+  font-family: 'poppins-light', sans-serif;
+  max-width: 800px;
+  width: 90%;
+  margin: 0 auto;
+  font-size: 15px;
+  font-weight: 300;
+  line-height: 26px;
+  text-align: left;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  color: rgba(0, 0, 0, 1);
+}
+
+ul {
+  margin: 50px auto 0;
+  max-width: 1600px;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+a {
+  font-family: 'poppins-light', sans-serif;
+  font-size: 22px;
+  font-weight: 300;
+  line-height: 36px;
+  letter-spacing: -0.02em;
+  text-align: right;
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 1);
+  cursor: pointer;
+  position: relative;
+  cursor: pointer;
+}
+
+a::after {
+  display: inline-flex;
+  content: "";
+  background-image: url(assets/right-arrow.svg);
+  background-size: cover;
+  width: 16px;
+  height: 8px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0 auto 7px;
+}
+
+main {
+  margin: 60px auto;
+  width: 100%;
+  height: 700px;
+  background-image: url(assets/hero-image.jpg);
+  background-size: cover;
+  position: relative;
+}
+
+aside {
+  width: 674px;
+  height: 345px;
+  background-image: url(assets/hero-content.jpg);
+  background-size: cover;
+  position: absolute;
+  top: 135px;
+  left: 101px;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  padding: 40px 100px 45px;
+}
+
+aside p {
+  width: auto;
+  text-shadow: unset;
+  text-decoration: underline;
+}
+
+aside h2 {
+  font-family: 'ivyPresto-display-light', sans-serif;
+  font-size: 55px;
+  font-weight: 400;
+  line-height: 60px;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+button {
+  font-family: 'ivyPresto-display-light', sans-serif;
+  min-width: 174px;
+  padding: 0 40px;
+  height: 53px;
+  background: rgba(251, 224, 218, 1);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 35px;
+  letter-spacing: 0.05em;
+  margin-top: 25px;
+  position: relative;
+  text-indent: -23px;
+  cursor: pointer;
+}
+
+button::after {
+  display: inline-flex;
+  content: "";
+  background-image: url(assets/right-arrow.svg);
+  background-size: cover;
+  width: 16px;
+  height: 8px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto 0 auto 7px;
+}
+
+.active {
+  color: rgba(211, 167, 157, 1);
+  text-shadow: 0px 4px 4px rgba(211, 167, 157, 0.5);
+}
+
+.active::after {
+  display: inline-flex;
+  content: "";
+  background-image: url(assets/down-arrow.svg);
+  background-size: cover;
+  width: 17px;
+  height: 25px;
+  position: absolute;
+  top: 8px;
+  bottom: 0;
+  margin: auto 0 auto 5px;
+}
+
+.hidden {
+  display: none;
+}
+
+
+/* Media Qeuries */
+@media(max-width: 1200px) {
+  ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  li {
+    margin-bottom: 15px
+  }
+
+  li:last-child {
+    margin-bottom: 0;
+  }
+
+  aside {
+    width: 57%;
+    height: auto;
+  }
+}
+
+@media(max-width: 900px) {
+  aside {
+    position: relative;
+    top: 70px;
+    left: unset;
+    margin: 0 auto;
+    padding: 40px 40px 45px;
+  }
+
+  main {
+    background-position: center;
+  }
+
+  h1 {
+    font-size: 9vw;
+  }
+}
+
+@media(max-width: 600px) {
+  aside h2 {
+    font-size: 9vw;
+  }
+
+  main {
+    height: auto;
+    margin-top: 30px;
+  }
+
+  ul {
+    margin-top: 20px;
+  }
+
+  li {
+    margin-bottom: 5px;
+  }
+
+  a {
+    font-size: 18px;
+  }
+}
